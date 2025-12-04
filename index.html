@@ -7,34 +7,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header>
     <h1>CraftedMinds</h1>
     <nav>
       <a href="#home">Home</a>
       <a href="#members">Members</a>
-      <a href="#skills" >Skills</a>
+      <a href="#profiles">Profiles & Skills</a>
+      <a href="#skills" >Team Skills</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
   <section id="home" class="hero">
     <h2>Welcome to <span>CraftedMinds</span></h2>
     <p>We are a team of passionate developers and designers, shaping ideas into digital reality.</p>
     <button class="btn" onclick="scrollToMembers()">Meet the Team</button>
   </section>
 
-  <!-- Members Section -->
   <section id="members" class="members">
     <h2>Our Team</h2>
     <div class="member-grid">
-      <!-- Each member card -->
       <div class="member-card">
         <div class="img-container">
           <img src="images/abaday.jpg" alt="Abaday">
           <div class="overlay">
-            <a href="Abaday.html" class="view-btn">View Profile</a>
+            <a href="#profile-abaday" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Abaday</h3>
@@ -45,7 +42,7 @@
         <div class="img-container">
           <img src="images/agcanas.jpg" alt="Agcanas">
           <div class="overlay">
-            <a href="Agcanas.html" class="view-btn">View Profile</a>
+            <a href="#profile-agcanas" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Agcanas</h3>
@@ -56,7 +53,7 @@
         <div class="img-container">
           <img src="images/aguilar.jpg" alt="Aguilar">
           <div class="overlay">
-            <a href="Aguilar.html" class="view-btn">View Profile</a>
+            <a href="#profile-aguilar" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Aguilar</h3>
@@ -67,7 +64,7 @@
         <div class="img-container">
           <img src="images/alejo.jpg" alt="Alejo">
           <div class="overlay">
-            <a href="Alejo.html" class="view-btn">View Profile</a>
+            <a href="#profile-alejo" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Alejo</h3>
@@ -78,7 +75,7 @@
         <div class="img-container">
           <img src="images/balot.jpg" alt="Balot">
           <div class="overlay">
-            <a href="Balot.html" class="view-btn">View Profile</a>
+            <a href="#profile-balot" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Balot</h3>
@@ -89,7 +86,7 @@
         <div class="img-container">
           <img src="images/barozo.jpg" alt="Barozo">
           <div class="overlay">
-            <a href="Barozo.html" class="view-btn">View Profile</a>
+            <a href="#profile-barozo" class="view-btn">View Details</a>
           </div>
         </div>
         <h3>Barozo</h3>
@@ -98,9 +95,140 @@
     </div>
   </section>
 
-  <!-- Skills -->
+  <section id="profiles" class="profiles-section">
+    <h2>Individual Member Profiles & Skills</h2>
+
+    <div id="profile-abaday" class="profile-details-merged">
+      <h3>Abaday <small>(Project Leader | Task Coordinator)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Responsive Web Design</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Project Planner</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Task delegation and progress tracking</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Website development and documentation</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="profile-agcanas" class="profile-details-merged">
+      <h3>Agcanas <small>(Web Designer | Frontend Developer)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Responsive Web Designer</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>JavaScript DOM manipulation and interactivity</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>UI/UX design and accessibility</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Debugging frontend code</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="profile-aguilar" class="profile-details-merged">
+      <h3>Aguilar <small>(Quality Checker| Layout Planner)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Designing sections and page components</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>CSS styling and color theme coordination</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Adding small JavaScript features</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Supporting development documentation</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="profile-alejo" class="profile-details-merged">
+      <h3>Alejo <small>(Documentation | Design Reviewer)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Asisting frontend debugging</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>HTML and CSS structure setupS</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>JavaScript form validation</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Responsive design adjustments</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="profile-balot" class="profile-details-merged">
+      <h3>Balot <small>(Cloud Developer | Server Configurator)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Hosting cloud platforms</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Managing databases in the cloud</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>API connection between frontend and backend</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Monitoring and optimizing performance</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+    <div id="profile-barozo" class="profile-details-merged">
+      <h3>Barozo <small>(Database Manager | MySQL Designer)</small></h3>
+      <div class="skill-bar-merged">
+        <p>Building and managing server-side logic</p>
+        <div class="bar"><span style="--skill-level: 95%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Database setup and connection(eg., MySQL)</p>
+        <div class="bar"><span style="--skill-level: 85%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>User authentication and data validation</p>
+        <div class="bar"><span style="--skill-level: 80%;"></span></div>
+      </div>
+      <div class="skill-bar-merged">
+        <p>Error handling and optimization</p>
+        <div class="bar"><span style="--skill-level: 90%;"></span></div>
+      </div>
+      <hr>
+    </div>
+
+  </section>
+  <hr>
+
   <section id ="skills" class="skills-section">
-  <h2>Our Skills</h2>
+  <h2>Our Team Skills</h2>
   <div class="skills-container">
     <div class="skill">
       <p>HTML & CSS</p>
@@ -124,9 +252,9 @@
     </div>
   </div>
 </section>
+<hr>
 
 
-  <!-- Contact -->
   <section id="contact" class="contact">
     <h2>Contact Us</h2>
     <form id="contactForm">
@@ -137,7 +265,6 @@
     </form>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>© 2025 CraftedMinds | Abaday, Agcanas, Aguilar, Alejo, Balot, and Barozo</p>
   </footer>
