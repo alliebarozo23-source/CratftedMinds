@@ -1,0 +1,398 @@
+/* === Base Setup === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #020617, #000);
+  color: #e0f2fe;
+  scroll-behavior: smooth;
+}
+
+/* === Header === */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: rgba(2, 6, 23, 0.95);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0 15px #00ffff;
+  border-bottom: 1px solid #00ffff30;
+}
+
+header h1 {
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+nav a {
+  color: #e0f2fe;
+  margin-left: 20px;
+  text-decoration: none;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* === Hero === */
+.hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(180deg, rgba(0,0,20,0.6), rgba(0,0,0,0.9));
+}
+
+.hero h2 span {
+  color: #00ffff;
+  text-shadow: 0 0 25px #00ffff;
+}
+
+.btn {
+  background: linear-gradient(90deg, #00ffff, #009dff);
+  color: #001122;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 20px;
+  box-shadow: 0 0 20px #00ffff;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.btn:hover {
+  background: linear-gradient(90deg, #009dff, #00ffff);
+  box-shadow: 0 0 35px #00ffff;
+}
+
+/* === Members Section === */
+.members {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+.members h2 {
+  color: #00ffff;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 15px #00ffff;
+}
+
+.member-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* === Member Card === */
+.member-card {
+  background: rgba(0, 20, 40, 0.9);
+  border: 1px solid #00ffff80;
+  border-radius: 15px;
+  padding: 15px;
+  transition: 0.4s;
+  position: relative;
+  box-shadow: 0 0 15px #00ffff40;
+}
+.member-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+/* === Image Container (with Loading Effect) === */
+.img-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+/* Rotating loading ring */
+.img-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid transparent;
+  border-top: 3px solid #00ffff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.img-container img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.4s, filter 0.4s;
+  filter: brightness(0.9) contrast(1.2);
+}
+.img-container:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* === Overlay + View Button === */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 255, 255, 0.15);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  transition: opacity 0.4s;
+}
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  color: #001122;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00ffff;
+  transition: 0.3s;
+}
+.view-btn:hover {
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  box-shadow: 0 0 25px #00ffff;
+}
+
+/* === Overall Section === */
+.overall {
+  padding: 80px 10%;
+  background: #010516;
+  text-align: center;
+}
+.overall h2 {
+  color: #00ffff;
+  margin-bottom: 40px;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 25px #00ffff;
+  font-size: 1.8em;
+}
+/* === Heather Navigator Animation === */
+section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* === Contact Section === */
+.contact {
+  padding: 80px 10%;
+  text-align: center;
+}
+form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+input, textarea {
+  padding: 12px;
+  background: #0a192f;
+  border: 1px solid #00ffff80;
+  color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #00ffff30;
+}
+textarea { resize: none; height: 120px; }
+
+button {
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border: none;
+  color: #000;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover {
+  background: linear-gradient(90deg, #0077ff, #00ffff);
+  box-shadow: 0 0 20px #00ffff;
+}
+
+/* === Footer === */
+footer {
+  background: #000a1a;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #00ffff40;
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* === Profile Pages === */
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 10%;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.profile-container img {
+  width: 300px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px #00ffff;
+  position: relative;
+}
+
+/* Animated loading border around profile */
+.profile-container img::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border: 3px solid transparent;
+  border-top-color: #00ffff;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+.profile-details {
+  max-width: 500px;
+}
+.profile-details h2 {
+  color: #00ffff;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffff;
+}
+
+/* === Profile Skill Bars (Centered & Wider) === */
+.profile-details {
+  max-width: 700px;
+  text-align: center; /* Center the text and bars */
+  margin-left: 0 auto;
+  margin-bottom: 60px; /* Adds space before back button */
+}
+
+.skill-bar {
+  margin: 20px 0;
+  width: 90%; /* wider bar area */
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; /* Centers the bar */
+}
+
+.skill-bar p {
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  color: #e0f2fe;
+  font-weight: 500;
+  text-align: center; /* Centers skill name */
+}
+
+.bar {
+  background: #0a192f;
+  height: 22px; /* thicker bar */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00ffff60;
+  margin-bottom: 15px;
+}
+
+.bar span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border-radius: 12px;
+  box-shadow: 0 0 20px #00ffff;
+  animation: loadSkill 2s ease-in-out forwards;
+}
+
+/* Smooth bar loading animation */
+@keyframes loadSkill {
+  from { width: 0; }
+  to { width: var(--skill-level); }
+}
+
+/* === Skills Section (Centered & Animated) === */
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 10%;
+  background: #010516;
+  text-align: center;
+}
+
+.skills-section h2 {
+  color: #00ffff;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 0 0 15px #00ffff;
+  margin-bottom: 30px;
+}
+
+.skills-container {
+  width: 80%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.skill p {
+  margin-bottom: 6px;
+  color: #e0f2fe;
+  font-weight: 500;
+}
+
+.skill-bar {
+  background: #0a192f;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px #00ffff30;
+}
+
+.skill-bar span {
+  display: block;
+  height: 12px;
+  background: linear-gradient(90deg, #00ffff, #0077ff);
+  border-radius: 10px;
+  width: 0;
+  animation: loadSkill 2s ease-in-out forwards;
+}
+
+/* Skill loading animation */
+@keyframes loadSkill {
+  from { width: 0; }
+  to { width: var(--skill-level); }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CraftedMinds | Group Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <h1>CraftedMinds</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#members">Members</a>
+      <a href="#skills" >Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to <span>CraftedMinds</span></h2>
+    <p>We are a team of passionate developers and designers, shaping ideas into digital reality.</p>
+    <button class="btn" onclick="scrollToMembers()">Meet the Team</button>
+  </section>
+
+  <!-- Members Section -->
+  <section id="members" class="members">
+    <h2>Our Team</h2>
+    <div class="member-grid">
+      <!-- Each member card -->
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/abaday.jpg" alt="Abaday">
+          <div class="overlay">
+            <a href="Abaday.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Abaday</h3>
+        <p>Project Leader | Task Coordinator </p>
+      </div>
+
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/agcanas.jpg" alt="Agcanas">
+          <div class="overlay">
+            <a href="Agcanas.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Agcanas</h3>
+        <p>Web Designer | Frontend Developer</p>
+      </div>
+
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/aguilar.jpg" alt="Aguilar">
+          <div class="overlay">
+            <a href="Aguilar.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Aguilar</h3>
+        <p>Quality Checker| Layout Planner</p>
+      </div>
+
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/alejo.jpg" alt="Alejo">
+          <div class="overlay">
+            <a href="Alejo.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Alejo</h3>
+        <p>Documentation | Design Reviewer</p>
+      </div>
+
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/balot.jpg" alt="Balot">
+          <div class="overlay">
+            <a href="Balot.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Balot</h3>
+        <p>Cloud Developer | Server Configurator</p>
+      </div>
+
+      <div class="member-card">
+        <div class="img-container">
+          <img src="images/barozo.jpg" alt="Barozo">
+          <div class="overlay">
+            <a href="Barozo.html" class="view-btn">View Profile</a>
+          </div>
+        </div>
+        <h3>Barozo</h3>
+        <p>Database Manager | MySQL Designer</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id ="skills" class="skills-section">
+  <h2>Our Skills</h2>
+  <div class="skills-container">
+    <div class="skill">
+      <p>HTML & CSS</p>
+      <div class="skill-bar"><span style="--skill-level: 90%;"></span></div>
+    </div>
+    <div class="skill">
+      <p>JavaScript</p>
+      <div class="skill-bar"><span style="--skill-level: 80%;"></span></div>
+    </div>
+    <div class="skill">
+      <p>PHP & MySQL</p>
+      <div class="skill-bar"><span style="--skill-level: 70%;"></span></div>
+    </div>
+    <div class="skill">
+      <p>UI/UX Design</p>
+      <div class="skill-bar"><span style="--skill-level: 75%;"></span></div>
+    </div>
+    <div class="skill">
+      <p>Graphic Design</p>
+      <div class="skill-bar"><span style="--skill-level: 60%;"></span></div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 CraftedMinds | Abaday, Agcanas, Aguilar, Alejo, Balot, and Barozo</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
